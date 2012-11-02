@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner4.png" alt="title" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a>
+                    </li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>Future of Nanotechnology</h2>
+        <p>The  possible applications of nanotechnology seem endless, especially in healthcare,  reducing our environmental impact and national security.</p>
+	  	<p>Scientists believe that in the future, nanotechnology may produce 
+		<ul>
+			<li>surgical instruments the size of molecules
+			<li>the creation of food from molecules, possibly ending famine
+			<li>polution free industrial manufacturing
+			<li>devices that clean up pollution
+			<li>nanobots that cure cancer, AIDS and bacteria/viruses
+			<li>personalized medicine, specific to a person's DNA
+			<li>smart houses that adapt to temperature and environment
+		</ul>
+		<div align="center"><img src="pics/nanotube.jpg" width="220" alt="Carbon Nanotube" title="Carbon Nanotube" /></div>
+        <p>According to Mihail C. Roco, a senior advisor for nanotechnology at the National Science Foundation, there are four stages of nanotech development:
+	  <ol>
+			<li>Development of nanomaterials with a stable structure that are usually used as part of a product (began in 2000)
+			<li>Focused research on nanostructures that change size, shape or conductivity during its use (began in 2005)
+			<li>Development of systems of nanostructures that form self-dependent wholes that operate by themselves (projected to start around 2010)
+			<li>Development of molecular nanosystems that may lead to new types of genetic therapies and anti-aging treatments (projected around 2015-2020)
+		</ol>
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

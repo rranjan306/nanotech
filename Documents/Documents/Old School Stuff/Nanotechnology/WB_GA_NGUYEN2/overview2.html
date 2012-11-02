@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner4.png" alt="title" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a>
+                    </li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>How Nanotechnology Works</h2>
+        <img src="pics/nanoscale.jpg" width="250" align="right" alt="Nanoscale Diagram" title="Nanoscale Diagram"/><p>What makes nanotechnology so special? At first glance, nanomaterials seem to be the same as regular sized materials. In reality, they aren’t the same at all. At the nanoscale, molecules and atoms behave differently than they do when they are visible to the human eye. Nanomaterial’s physical properties are different at that scale, creating the need for more research and information about nanotechnology.</p>
+        <p>Nanoscale devices, such as nanobots, sensors and medical devices need some sort of energy source to power them, so research, at places like the Georgia Institute of Technology, is being done now on nanogenerators. "Nanogenerator" is the general term used for the power plants that harvest and supply energy to nanoscale devices. They replace the need for large batteries, making the devices more efficient.</p>
+        <h3>How nanomaterials are made</h3>
+        	<p>	There are currently two main approaches to creating nanomaterials. The first, the top-down approach (also called nanofabrication or microfabrication) is made of two stages. First, a single layer of material is grown on a substrate ( a supporting base) during the growth stage. Next, in the lithography transfer stage, the one dimension layer is added to another uniform layer to form a second/third dimension. The top-down approach involves cutting down larger materials to form the layers. The second main way nanomaterials are made is referred to as the bottom-up approach. With this method, atoms and molecules are manipulated one at a time to build nanomaterials.</p>
+        	<p>Both approaches have their flaws, however. They are both are costly, and nanofabrication is not precise all the time. The bottom-up approach is generally new, and because of the unstable nature of nanomaterials, they are sometimes hard to control and manipulate. On the other hand, if the bottom-up approach becomes more stable, it will create cheaper and more efficient products.
+</p>
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

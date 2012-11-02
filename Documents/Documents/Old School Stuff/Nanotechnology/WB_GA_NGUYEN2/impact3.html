@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner4.png" alt="title" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a>
+                    </li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>Space Elevator</h2>
+        <p>In November of 2008, engineers from all over the world attended a conference in Japan to discuss and design a lift that will transport anything directly into space. The ‘space elevator’, as it is called, has received worldwide coverage; NASA has posed this concept with a $4 million prize as a challenge to encourage more designs. The Japan Space Elevator Association, Spaceward Foundation and Liftport Group are three companies focused on this project. </p>
+        <div align="center"><img src="pics/space_elevator.jpg" alt="Space Elevator" title="Space Elevator" /></div>
+        <p>Those working on the project right now believe that the power source of the elevator will most likely come from a carbon nanotube cable, which has enough strength to span the length from Earth to space. However, scientists are unsure of how to make a cable long enough. Once completed, the cable would be anchored to Earth and reach into space with a weight to balance it on the other side. Inertia is theorized to keep the cable tight. The space elevator would be used to transport people into space, dispose of nuclear waste and place solar panels in space to provide power to homes.</p>
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

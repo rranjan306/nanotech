@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner5.png" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it Works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>Safety Concerns</h2>
+        <p>In December of 2008, the National Research Council (NRC) in the US reported that the US government is not standardizing and regulating nanotech enough, causing a negative reaction from consumers. Many similar organizations around the world, like the Royal Commission on Environmental Pollution in Great Britain and the Council of Canadian Academies agree that more research should be done on nanotechnology, and that a clear set of regulations should be created. 5% of US funding for nanotechnology is used to research its effects on health and safety.</p>
+        <p>Some of their concerns stem from the fact that nanomaterials cannot be seen by the naked eye, arousing issues in the disposal of nanomaterials. Because of their miniscule size, scientists are still unsure of what nanomaterials will do when they are released into the environment. Their questions include: &quot;Will animals eat the nanoparticles?&quot;, &quot;Will humans drink them if they are released into the water?&quot; and &quot;What happens if we breathe them in?&quot;. One fear researchers have is that nanomaterials may be as harmful as asbestos, which would lead to serious health hazards. A study on lab rats in 2004 by the Society of Toxicology has already shown that carbon nanotubes are toxic if inhaled in excess amounts. </p>
+        <div align="center"><img src="pics/NanotechFly.jpg" width="300" alt="Nanobot on finger" title="Nanobot on finger" /></div>
+        <p>Other concerns come from the general public, who are somewhat scared of nanotechnology after being introduced to it through fictional works, such as Michael Chrichton’s <i>Prey</i>. Chrichton’s book tells the story of scientists who were stalked by dangerous, intelligient nanobots that they had first created. Some consumers are also reluctant to try nanotech products because of the lack of regulations and general research/knowledge.</p>
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

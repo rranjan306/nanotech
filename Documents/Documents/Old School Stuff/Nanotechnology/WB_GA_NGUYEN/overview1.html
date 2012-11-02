@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner5.png" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it Works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+        	<h2>History</h2>
+            	<p>Major advances in nanotechnology  since 1959:</p>
+                <p>		<font color="#2294D9"><strong>1959</strong></font>- American physicist Richard P. Feynman gives a speech  at the American Physical Society, and is credited with originating the concept  of nanotechnology <br />
+             			<font color="#2294D9"><strong>1974</strong></font>-Japanese scientist Norio Taniguchi is the first to use the term ‘nanotechnology’ in his paper, “On the Basic Concept of Nanotechnology” <br />
+                        <font color="#2294D9"><strong>1981</strong></font>-Kim Eric Drexler, a genetic engineering student at MIT,  popularizes the theory of nanotechnology <br />
+             			<font color="#2294D9"><strong>1985</strong></font>- Richard Errett Smalley makes the first major  development in nanotechnology by finding a way to produce carbon in a third  form (besides graphite and diamond). Smalley called this synthetic carbon molecule  buckyball, or fullerene<br />
+             			<font color="#2294D9"><strong>2000</strong></font>- US President Bill Clinton creates the National Nanotechnology  Initiative (NNI) in order to further research in nanotechnology
+             	</p>
+				<p align="center"><img src="pics/bucky-ball.jpg" width="200" height="183" alt="Buckyball" title="Buckyball" /></p>
+				<p align="center">The buckyball molecule was named after the American architect Buckminster Fuller, who had built a similar looking geodesic dome.
+          		</p>
+				<h2>Tools Used in Nanotech</h2>
+          		<img src="pics/tem.jpg" width="190" align="right" alt="Transmission Electron Microscope" title="Transmission Electron Microscope"/>
+                <font id="bullet"><b>Transmission Electron Microscope(TEM)</b></font>
+                <p>
+                The TEM can magnify an object up to 30 million times, making it ideal for use with nanoparticles. This microscope uses an electron beam to form a magnified image of the object that is then recorded on a screen. The electrons from the beam will either be absorbed, bounce off or pass through the object, allowing an accurate image to be produced. (See image at right)
+            	</p>
+                <font id="bullet"><b>Atomic Force Microscope (AFM)</b></font>
+                <p>
+                The AFM is uses a silicon tip as a probe to record the properties of the surface of an object. The tip moves along the surface of the object with constant pressure (adjusting itself when needed), and a different machine records the movement of the probe to form a picture of the object's surface. The electrons on the probe and the surface of the object repel each other, allowing this method to work.
+                </p>
+                <font id="bullet"><b>Scanning Tunneling Microscope (STM)</b></font>
+                <p>
+                The STM, like the AFM, also uses a probe to map out the surface of an object. However, the STM uses a different property of electrons, tunneling; tunneling allows electrons from the probe to "tunnel" into the surface of the object. From there, the electrons emit electric currents that are recorded and analyzed to create a topographical picture of the object. 
+                </p>                 
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

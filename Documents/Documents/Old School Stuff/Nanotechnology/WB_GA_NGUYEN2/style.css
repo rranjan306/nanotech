@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	line-height:20px;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:24px;
+	color:#333;
+	text-align:center;
+}
+h4 {
+	color:#2294d9;
+	font-size:14px
+}
+th {
+	border-bottom: 5px solid #333333;
+}
+td {
+	vertical-align:top;
+}
+#bullet {
+	color:#2294d9;
+	font-size:14px;
+}
+#thepage {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#footer {
+	background: #333333; 
+	border-bottom: 2px solid #999;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+	text-align:center;
+}
+
+#content {
+	padding: 10px;
+}
+
+a:link {color: #9AD9EA}
+a:visited {color: #2294D9}
+a:hover {color: #9AD9EA}
+a:active {color: #9AD9EA}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.sidebarmenu ul{
+margin: 0;
+padding: 0px;
+list-style-type: none;
+font: bold 13px Verdana;
+width: 234px; /* Main Menu Item widths */
+border-bottom: 1px solid #ccc;
+}
+ 
+.sidebarmenu ul li{
+position: relative;
+}
+
+/* Top level menu links style */
+.sidebarmenu ul li a{
+display: block;
+overflow: auto; /*force hasLayout in IE7 */
+color: white;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration: none;
+padding: 6px;
+border-bottom: 1px solid #778;
+border-right: 1px solid #778;
+}
+
+.sidebarmenu ul li a:link, .sidebarmenu ul li a:visited, .sidebarmenu ul li a:active{
+background-color: #9AD9EA; /*background of tabs (default state)*/
+}
+
+.sidebarmenu ul li a:visited{
+color: white;
+}
+
+.sidebarmenu ul li a:hover{
+background-color: #2294D9;
+font-color:white;
+}
+
+/*Sub level menu items */
+.sidebarmenu ul li ul{
+position: absolute;
+width: 170px; /*Sub Menu Items width */
+top: 0;
+visibility: hidden;
+}
+
+.sidebarmenu a.subfolderstyle{
+background: url(right.gif) no-repeat 97% 50%;
+}
+
+ 
+/* Holly Hack for IE \*/
+* html .sidebarmenu ul li { div align: left; height: 1%; }
+* html .sidebarmenu ul li a { height: 1%; }
+/* End */

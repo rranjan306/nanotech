@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+
+    <table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+      <tr>
+        <th colspan="2" scope="col"><img src="pics/banner5.png" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it Works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>Bibliography</h2>
+				<p> (2008) Nanotechnology. <em>MSN Encarta</em>.  Accessed on Nov 20, 2008 from             &lt;http://encarta.msn.com/encyclopedia_701665682/Nanotechnology.html&gt;.
+                <br />
+				<b><font id="bullet">---</font></b>This source is credible because it is a published encyclopedia article that is  periodically updated by experts in specific fields. This article gives an overview of what nanotechnology is, how it is made and its history. Information from this article was useful in providing the reader with background information about nanotechnology. </p>
+                <p>Binns, C. (2006, March). Nanotech Now: Tiny Technology  All Around You. Accessed March 1, 
+                <br />
+                  2009, from  LiveScience: &lt;http://www.livescience.com/technology/060330 _nanotech_now.html&gt;. 
+                <br />
+                <b><font id="bullet">---</font></b>This article gives detailed information about how  nanotechnology is used in specific consumer products today, and was useful in  citing examples of products made with nanotech. This source is credible because  it is from a science news website that gets its stories from other legitimate news  networks.</p>
+                <p>Cotter, J. (2009, January 9). Nanotechnology: Governments  passive, critics say [electronic <br />
+                  version]. <em>Toronto Star</em>. Accessed Jan 12, 2009  from &lt;http://www.thestar.com /article/564628&gt;.
+                <br />
+                <b><font id="bullet">---</font></b>This article talks about the  future of nanotech and what it could mean for the general population of  consumers. It also goes over different government’s regulation of nanotech  products, and was used to explain some safety concerns  with nanotechnology. This source is credible because the article is from a widely  published periodical that reports hard news.</p>
+             	<p>Flatow, I. (2007). <em>Present  at the Future</em>. New York: HarperCollins.
+              	<br />
+                <b><font id="bullet">---</font></b>This source is credible because it is a published nonfiction book written by a well known journalist. This book included a chapter on nanotechnology, and was used in the safety section of this site.</p>     
+                <p>Heath, J.R., Davis, M. E., &amp; Hood, L. (2009,  January). Nanomedicine—Revolutionizing the 
+                <br />
+                  Fight Against  Cancer. [electronic version] Accessed February 6, 2009, from <em>Scientific American</em>: &lt;http://www.sciam.com/article.cfm?id=nanomedicine-targets-cancer&gt;.
+                <br />
+  				<b><font id="bullet">---</font></b><em>Scientific American</em> article written by scientists working  with nanotechnology. It provides a detailed explanation of how new advances in  nanotechnology can affect medicine and cancer research, and was  used in the section explaining nanotech’s impact in healthcare. This source is  credible because it was written by professors that specialize in nanotechnology. </p>
+                 <p>Knight, M. (2008, November 12). New Nano coating boosts  solar efficiency. <em>cnn.com</em>. Accessed 
+                <br />
+                  Feb 6, 2009 from  &lt;http://www.cnn.com/2008/TECH/science/11/12/solar.coating/&gt;.
+                <br />
+                <b><font id="bullet">---</font></b>News article that explains how nanotechnology has  affected the environment, specifically renewable energy. This was useful in describing  nanotech’s impact on the environment. This source is credible because it is a  news network that publishes factual stories.</p>
+                <p>McIntyre, I.  A. (2008). Nanotechnology. <em>Gale Encyclopedia of Science</em>. 4th ed. Detroit: Gale       Group, 2008. Accessed Nov 20, 2008 from  Discovering Collection. &lt;http://find.galegroup.  com/srcx/infomark.do?&amp;contentSet=GSRC&amp;type=retrieve&amp;tabID=T001&amp;prodId=DC&amp;docId=
+                EJ2644041551&amp;source=gale&amp;srcprod=DISC&amp;user\GroupName=seat17114&amp;version=1.0&gt;.
+                <br />
+              	<b><font id="bullet">---</font></b>An article about  the history of nanotechnology, advances in the field and possible applications  of this science in the future. This was using in  cross-referencing facts and helped to explain nanotechnology. This source is  credible because it is an encyclopedia in which experts and professionals  contribute to.</p>	
+                <p>Mihail, C. R. (2006, July). Nanotechnology’s Future.  [electronic version] Accessed March 1, 
+              	<br />
+                  2009, from <em>Scientific American</em>. &lt;http://www.sciam.com  /article.cfm?id=nanotechnologys-future&gt;.
+               	<br />
+               	<b><font id="bullet">---</font></b>This article is credible because it was written by a  key architect of the National Nanotechnology Initiative and was used  extensively in describing nanotech’s possible future. </p> 
+                <p>Pellerin, C. (2008, September  24). Nations Worldwide Pour Billions Into Nanotechnology;           Meeting in Denmark  Hosts 800 Participants from 44 Countries. <em>State Department Documents / FIND</em>. Retrieved November  24, 2008 from Platinum Full Text Periodicals database.  (Document ID: 1565073071).
+                <br />
+                <b><font id="bullet">---</font></b>This article provides a lot  of statistical information (money investments) that was useful in showing the monetary effort countries are making  to advance nanotechnology. This is a state department  document, and is credible because it was written by the government.</p>
+                <p>Steere, M. (2008, October 03). ‘Space Elevator’ would take  humans into orbit. <em>cnn.com</em>. 
+                <br />
+                  Accessed  Jan 12, 2009 from &lt; http://www.cnn.com/2008/WORLD/europe/10/02  /space.elevator/index.html&gt;.   
+                <br />
+                <b><font id="bullet">---</font></b>This article explains what  the ‘space elevator’ is and current progress that is being made. It was used in the Space Elevator section of this site. This source is credible because CNN is reputable news  network. </p>
+                <p>Wang, Z.L. (2008, November  9). How Self Powered Nanotech Machines Work [electronic           version]. <em>Scientific American</em>. Accessed Nov 21, 2008  from&lt;http://www.sciam.com/    article.cfm?id=how-self-powered-nanotech-works&gt;.					
+                <br />
+                <b><font id="bullet">---</font></b>Magazine article about Zhong  Lin Wang’s specific research with nanogenerators and his findings. This was helpful in explaining nanodevices and how they work. This is credible  because Zhong Lin Wang works in nanotechnology at the Georgia Institute of Technology,  and has earned multiple scientific honors. Also, the Scientific American is a  scientific journal that publishes the work of scientists. </p>
+              	        
+        </td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>

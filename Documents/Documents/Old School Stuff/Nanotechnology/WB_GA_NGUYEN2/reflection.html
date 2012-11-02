@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="pics/icon.png"/>
+	<title>Nanotechnology</title>
+</head>
+
+<script type="text/javascript">
+
+//Nested Side Bar Menu (Mar 20th, 09)
+//By Dynamic Drive: http://www.dynamicdrive.com/style/
+
+var menuids=["sidebarmenu1"] //Enter id(s) of each Side Bar Menu's main UL, separated by commas
+
+function initsidebarmenu(){
+for (var i=0; i<menuids.length; i++){
+  var ultags=document.getElementById(menuids[i]).getElementsByTagName("ul")
+    for (var t=0; t<ultags.length; t++){
+    ultags[t].parentNode.getElementsByTagName("a")[0].className+=" subfolderstyle"
+  if (ultags[t].parentNode.parentNode.id==menuids[i]) //if this is a first level submenu
+   ultags[t].style.left=ultags[t].parentNode.offsetWidth+"px" //dynamically position first level submenus to be width of main menu item
+  else //else if this is a sub level submenu (ul)
+    ultags[t].style.left=ultags[t-1].getElementsByTagName("a")[0].offsetWidth+"px" //position menu to the right of menu item that activated it
+    ultags[t].parentNode.onmouseover=function(){
+    this.getElementsByTagName("ul")[0].style.display="block"
+    }
+    ultags[t].parentNode.onmouseout=function(){
+    this.getElementsByTagName("ul")[0].style.display="none"
+    }
+    }
+  for (var t=ultags.length-1; t>-1; t--){ //loop through all sub menus again, and use "display:none" to hide menus (to prevent possible page scrollbars
+  ultags[t].style.visibility="visible"
+  ultags[t].style.display="none"
+  }
+  }
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initsidebarmenu, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initsidebarmenu)
+
+</script>
+
+<body>
+<table width="780" border="0" cellspacing="0" cellpadding="0" id="thepage">
+<tr>
+        <th colspan="2" scope="col"><img src="pics/banner4.png" alt="title" /></th>
+      </tr>
+      <tr>
+      	<td width="30%">
+	        <div class="sidebarmenu">
+                <ul id="sidebarmenu1">
+                	<li><a href="index.html">Home</a></li>
+                	<li><a href="#">>Overview</a>
+                  		<ul>
+                  			<li><a href="overview1.html">History & Tools</a></li>
+                  			<li><a href="overview2.html">How it works</a></li>
+                  		</ul>
+                	</li>
+                	<li><a href="#">>Impact</a>
+                  		<ul>
+                  			<li><a href="impact1.html">Healthcare</a></li>
+                  			<li><a href="impact2.html">Environment</a></li>
+                  			<li><a href="impact3.html">Space Elevator</a></li>
+                		</ul>
+                	</li>
+                	<li><a href="product.html">Current Products</a></li>
+                    <li><a href="safety.html">Safety Concerns</a></li>
+                	<li><a href="money.html">Nanotech & Money</a></li>
+                	<li><a href="future.html">Future</a></li>
+                	<li><a href="reflection.html">Reflection</a>
+                    </li>
+                	<li><a href="#">>Sources</a>
+                    	<ul>
+                        	<li><a href="biblio.html">Bibliography</a>
+                            <li><a href="images.html">Images</a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+ 	
+        </td>
+        <td width="70%" id="content">
+		<h2>Reflection</h2>
+        <p>When I was first assigned the Bio Expo project in genetics class, way back in October, I was extremely excited. Unlike the science fairs I had participated in during middle school, I really wanted to give this project my all because it seemed different and more challenging. There was such a wide selection of categories that, at first, I didn’t know which one to choose. I hadn’t wanted to do a lot of writing, however, because I felt that I already did too much writing in school. By January, I had narrowed the categories down to two: a website or artwork. Art seemed like a fun idea, but when I couldn’t come up with any ideas for an engaging piece of art, I turned to the website. This has been a very challenging project for me because when I first started out, I had little to no knowledge of html, and I couldn’t get things to look exactly the way I wanted them to. However, I have overcome most of those challenges and the end result is right here on this computer monitor!</p>
+        <h4>Special Acknowledgments</h4>
+        <p>It has been a very long journey to finishing this project, so I would like to take some time to thank the people who helped me through this whole process.</p> 
+        <p>First of all, a thank you to my science teacher, <b><font id="bullet">Ms. Agatsuma</font></b>, who encouraged me from the beginning and helped me to choose a topic- she put this whole project in motion.</p>
+        <p>I would also like to express my gratitude to my mentor, <b><font id="bullet">Laura Burke</font></b>, for giving me ideas to help me get started. Thanks also for taking the time to look over my rough drafts. </p>
+        <p>Shout out to <b><font id="bullet">Steven</font></b> and <b><font id="bullet">Mandy</font></b>, for providing me with moral and technical support! </p>
+        <p>A special mention is needed for <b><font id="bullet">dynamicdrive.com</font></b>, the website that provided me with my navigation bar. After countless hours of trying to create one myself, I finally turned to the experts. </p>
+        <p>Last, but not least, I would like to thank my <b><font id="bullet">family</font></b>, who stayed patient with me while I had my eyes glued to the computer.</p>
+        <h2>Resources</h2>
+        <h4>Mentorship</h4>
+        <p>Laura Burke<br>
+        Graduate Research Assistant<br>
+        Washington State University<br>
+        (775) 224-9772<br>
+  		leburke@wsu.edu</p>
+<p>My mentor for this project was Laura Burke, and although we  were unable to meet in person, she gave me a lot of advice and helped me to  develop my ideas. We have exchanged many emails since January, and although her  area expertise is not nanotechnology, she was able to help me with the  structure of my site. Her ideas were insightful and I’m grateful for receiving  such a kind mentor.</p>
+        <h4>Interview</h4>
+        <p>Ethan Allen<br>
+        Manager, Education &amp; Outreach<br>
+        The Center of Nanotechnology at the University of Washington<br>
+        Box 351721<br>
+        Seattle, WA 98195<br>
+        (206) 616-9769<br>
+        ethane@u.washington.edu</p>
+        <p>I interviewed Ethan Allen on 03/30/09 through a phone call to clarify some aspects of nanotechnology. Since he works at the Center for Nanotechnology at the UW, he easily answered and expanded on all my questions. The Center, as he described, basically brings together researchers of nanotechnology and students from many different educational departments at the UW. In the nanotech user facility, a part of the Center, specialized high end equipment and microscopes are available for people to use. His main job there is to facilitate education programs by working with high school teachers and  graduate students. Although I had to reschedule the interview a couple of times, he was very patient and took time out of his schedule to help me.</p></td>
+      	</tr>
+      	<tr>
+        	<td colspan="2" scope="col" id="footer">Copyright 2009 ® Alisa Nguyen</td>
+		</tr>
+    </table>
+
+</body>
+</html>
